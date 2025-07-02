@@ -1,0 +1,13 @@
+# Core utilities
+requests
+python-dotenv
+
+# Hugging Face LLM wrapper
+huggingface_hub
+
+# Optional for future agent orchestration
+langchain-core>=0.1.50
+langchain-community>=0.0.29
+
+# Optional for CLI input or formatting (if needed later)
+rich
