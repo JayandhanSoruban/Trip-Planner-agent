@@ -7,3 +7,27 @@
 
 🔁 LangChain Agent: Binds LLM and tools into a reasoning loop (ReAct), allowing dynamic task planning.
 
+User: "Plan a 2-day trip to Rome"
+
+      ▼
+
+[LangChain Agent]
+  🧠 LLM understands query
+  🔁 Decides tasks dynamically using ReAct loop
+
+      ▼
+
+Calls ↓
+  ├── get_location("Rome")     → lat, lon
+  ├── get_weather(lat, lon)    → forecast
+  └── get_activities("Rome")   → top places
+
+      ▼
+
+[LLM Final Response]
+Generates beautiful natural itinerary using all returned tool outputs
+
+      ▼
+
+🧾 Output:
+"Day 1: Visit the Colosseum..."
