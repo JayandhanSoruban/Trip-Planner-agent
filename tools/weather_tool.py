@@ -6,7 +6,7 @@ load_dotenv()
 
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-def get_weather_forecast(city: str) -> str:
+def get_weather(city: str) -> str:
     if not API_KEY:
         return "❌ API key not found. Set OPENWEATHER_API_KEY in your .env file."
 
