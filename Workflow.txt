@@ -1,0 +1,14 @@
+WORKFLOW
+
+
+User Input
+    ↓
+[Location Agent]
+    ↓
+[Weather Agent] → [Attractions Agent] → [Stay Agent]
+                            ↓
+         [Cost Estimator Agent] → [Currency Agent]
+                            ↓
+              [Itinerary Generator Agent]
+                            ↓
+                   ✅ Final Travel Plan

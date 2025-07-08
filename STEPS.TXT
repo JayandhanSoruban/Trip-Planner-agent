@@ -1,0 +1,63 @@
+🔵 Step 0: User Input (Trigger)
+Input: "Plan a 3-day trip to Rome"
+
+✅ Parse: Extract location, duration, maybe budget if mentioned.
+
+🔷 Step 1: Location Resolver Agent
+Task: Verify destination is real & get geo-coordinates (lat/lon).
+
+Tool: OpenMeteo API / GeoDB API / Any geocoding API
+
+✅ Output: {city: Rome, lat: 41.89, lon: 12.49}
+
+🔷 Step 2: Weather Agent
+Task: Get weather forecast for that location.
+
+Tool: Weather API (Open-Meteo / WeatherAPI.com)
+
+✅ Output: Weather is sunny for next 3 days with avg. 25°C
+
+🔷 Step 3: Attraction Finder Agent
+Task: Get top-rated attractions nearby.
+
+Tool: WikiData, TripAdvisor scraping API, or static dataset
+
+✅ Output: [Colosseum, Vatican, Trevi Fountain, ...]
+
+🔷 Step 4: Stay Planner Agent
+Task: Get top affordable stays (hotels, hostels, Airbnb)
+
+Tool: Booking.com API, static mock, or scrape
+
+✅ Output: 3 hotels, avg ₹3000/night
+
+🔷 Step 5: Budget Estimator Agent
+Task: Estimate full daily cost (Stay + Food + Entry Tickets)
+
+Tool: Static logic or real price APIs
+
+✅ Output: Estimated cost per day: ₹5500
+
+🔷 Step 6: Currency Converter Agent
+Task: Convert cost into user's native currency
+
+Tool: CurrencyAPI, ExchangeRate-API (no credit card)
+
+✅ Output: Total 3-day cost: ~€200 or $215
+
+🔷 Step 7: Itinerary Generator Agent
+Task: Combine everything into structured day-by-day plan
+
+✅ Output:
+
+text
+Copy
+Edit
+Day 1: Arrive + Colosseum + Dinner @ Local Italian spot  
+Day 2: Vatican tour + Museum + Cafe  
+Day 3: Trevi Fountain + Shop + Fly back  
+Weather: Sunny, avg 25°C  
+Total Estimated Cost: $215 (~€200)
+✅ Final Output Agent
+Role: Bundle everything into a presentable format: JSON or formatted text.
+
